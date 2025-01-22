@@ -38,7 +38,7 @@ import razorpay_logo from './razorpay_logo.png'
 import stripe_logo from './stripe_logo.png'
 import bin_logo from './bin_logo.png'
 import bunner_logo from './bunner_logo.png'
-import mpesa_logo from './mpesa_logo'
+import mpesa_logo from './mpesa_logo.png'
 import cart_logo from './cart_logo.png'
 import profile_logo from './profile_logo.png'
 import jambo_logo from './jambo_logo.png'
@@ -54,7 +54,7 @@ export const assets = {
     jambo_logo,
 }
 
-export const product = [
+export const Products = [
     {
         _id: "a",
         name: "Sexy Women Basic Casual Fitting Top",
