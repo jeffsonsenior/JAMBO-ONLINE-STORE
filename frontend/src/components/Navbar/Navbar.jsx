@@ -147,14 +147,20 @@ const Navbar = () => {
         <div className="nav-bottom">
           <div className="nav-container">
             <div onClick={() => navigate("/category/Men")} className="navbar-link">
-              Men
+              Men fashion
             </div>
             <div onClick={() => navigate("/category/Women")} className="navbar-link">
-              Women
+              Women fashion
             </div>
             <div onClick={() => navigate("/category/Kids")} className="navbar-link">
-              Kids
+              Kids fashion
             </div>
+            <div onClick={() => navigate("/category/Accessories")} className="navbar-link">
+              Accessories
+            </div>
+            <div onClick={() => navigate("/category/Furniture")} className="navbar-link">
+              Furniture
+            </div>  
           </div>
         </div>
       </nav>
