@@ -94,12 +94,3 @@ body {
   cursor: pointer;
   transition: background 0.3s ease;
 }
-.product-card button:hover{
-  background: #f0b040;
-}
-.product-card button:active{
-  background: #f0a040;
-}
-.product-card button:focus{
-  outline: none;
-}
