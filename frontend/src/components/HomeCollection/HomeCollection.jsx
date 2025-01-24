@@ -45,7 +45,7 @@ const HomeCollection = () => {
                 {/* Display the product name */}
                 <h3>{product.name}</h3>
                 {/* Display the product price */}
-                <p>${product.price}</p>
+                <p>Ksh: {product.price}</p>
               </div>
             ))
           ) : (

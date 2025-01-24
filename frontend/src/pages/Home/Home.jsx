@@ -3,6 +3,7 @@ import Hero from '../../components/Hero/Hero'
 import BestSeller from '../../components/LatestCollection/BestSeller'
 import HomeCollection from '../../components/HomeCollection/HomeCollection'
 
+
 const Home = () => {
   return (
     <div>

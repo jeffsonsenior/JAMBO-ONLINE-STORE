@@ -33,10 +33,13 @@ body {
 .product-grid{
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  columns-gap: 10px;
+  gap: 0.5px;
+  column-gap: normal;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 10px;
+
+
+
 
 }
 .product-card{
@@ -80,7 +83,7 @@ body {
 }
 .product-card p{
   font-size: 14px;
-  color: #fc0505;
+  color: #fc059d;
   margin-top: 10px;
 }
 .product-card button{

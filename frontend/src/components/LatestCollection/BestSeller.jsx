@@ -25,11 +25,11 @@ const BestSeller = () => {
               <div className="product-card" key={product._id}>
                 <div className="product-image">
                   <Link to={`/product/${product._id}`}>
-                    <img src={product.image?.[0] /* || '/default-image.jpg'*/} alt={product.name || 'Product'} />
+                    <img src={product.image?.[0] || '/default-image.jpg'} alt={product.name || 'Product'} />
                   </Link>
                 </div>
                 <h3>{product.name}</h3>
-                <p>${product.price}</p>
+                <p>ksh: {product.price}</p>
               </div>
             ))
           ) : (
