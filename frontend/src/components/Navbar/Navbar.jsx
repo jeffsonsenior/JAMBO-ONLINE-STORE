@@ -1,71 +1,114 @@
-/**import React from 'react';
-import { Link,useNavigate } from 'react-router-dom';
-import { BiCart, BiUser } from 'react-icons/bi';
-import './Navbar.css'
-import { useState } from 'react';
-import { FaCentos } from 'react-icons/fa';
-
+import React, { useState, useEffect, useContext } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { FaShoppingCart, FaUserCircle, FaSpinner } from 'react-icons/fa';
+import './Navbar.css';
+import { ShopContext } from '../../context/shopContext';
 
 const Navbar = () => {
-
-const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [searchInput, setSearchInput] = useState('');
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const { updateSearchTerm, searchTerm } = useContext(ShopContext);
 
   const navigate = useNavigate();
+  const location = useLocation();
 
-  const handleNavigation = (path) => {
+  /*Sync search input with context searchTerm*/
+  useEffect(() => {
+    setSearchInput(searchTerm);
+  }, [searchTerm]);
+
+  /* Handle loading state on route change*/
+  useEffect(() => {
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-    navigate(path);
-  };
+    const timer = setTimeout(() => setLoading(false), 500);
+    return () => clearTimeout(timer);
+  }, [location]);
+
+  /**Handle search submission
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchInput.trim()) {
+      updateSearchTerm(searchInput);
+      /**navigate(`/search?query=${searchInput}`);*
+    }
+  };**/
+  const handleSearch = () => {
+    updateSearchTerm(searchInput);
+
+  }
+
+  /*Toggle and close dropdown*/
+  const toggleDropdown = () => setDropdownOpen(!isDropdownOpen);
+  const closeDropdown = () => setDropdownOpen(false);
+
+  /*Close dropdown when clicking outside*/
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (!e.target.closest('.profile-group')) {
+        closeDropdown();
+      }
+    };
+    if (isDropdownOpen) {
+      document.addEventListener('click', handleOutsideClick);
+    }
+    return () => document.removeEventListener('click', handleOutsideClick);
+  }, [isDropdownOpen]);
 
   return (
     <div>
-      {
-        loading && (
-          <div className="loader-container">
-            <div className="loader"><FaCentos className='loader-icon'/></div>
-            <p className="loader-text">Loading...</p>
+      {loading && (
+        <div className="loader-container">
+          <div className="loader">
+            <FaSpinner className="loader-icon spinning" />
           </div>
-        )
-      }
+          <p className="loader-text">Loading...</p>
+        </div>
+      )}
       <nav className="navbar">
         <div className="nav-top">
-          <Link to='/'>
-            <h2>Jambo Online store</h2>
+          <Link to="/">
+            <h2>Jambo Online Store</h2>
           </Link>
           <div className="search-bar">
-            <input type="text" placeholder="Search" />
-            <button className="search-button">Search</button>
+            <input type="text"
+              placeholder="Search"
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
+            />
+            <button onClick={handleSearch} className="search-button">Search</button>
           </div>
           <div className="icons">
-            <div className="profile-group">
-              <BiUser className="profile-icon" />
-              <div className="dropdown-menu">
-                <Link to="/login">
-                  <p className="dropdown-item">Account</p>
-                </Link>
-                <p className="dropdown-item">Logout</p>
-              </div>
+            <div className="profile-group" onClick={toggleDropdown}>
+              <FaUserCircle className="profile-icon" aria-label="User Profile" />
+              {isDropdownOpen && (
+                <div className="dropdown-menu">
+                  <Link to="/login">
+                    <p className="dropdown-item">Account</p>
+                  </Link>
+                  <p className="dropdown-item" onClick={() => console.log('Logout action')}>
+                    Logout
+                  </p>
+                </div>
+              )}
             </div>
-            <div className="cart-icon" onClick={() => handleNavigation("/cart")}>
-              <BiCart className="icon" />
+            <div className="cart-icon" onClick={() => navigate('/cart')}>
+              <FaShoppingCart className="icon" aria-label="Cart" />
               <span className="cart-count">0</span>
             </div>
           </div>
         </div>
         <div className="nav-bottom">
           <div className="nav-container">
-            <div onClick={() => handleNavigation("/category/Men")} className="navbar-link">
-              Men
-            </div>
-            <div onClick={() => handleNavigation("/category/Women")} className="navbar-link">
-              Women
-            </div>
-            <div onClick={() => handleNavigation("/category/Kids")} className="navbar-link">
-              Kids
-            </div>
+            {['Men', 'Women', 'Kids', 'Accessories', 'Furniture'].map((category) => (
+              <div
+                key={category}
+                onClick={() => navigate(`/category/${category}`)}
+                className="navbar-link"
+              >
+                {category} Fashion
+              </div>
+            ))}
           </div>
         </div>
       </nav>
@@ -74,34 +117,61 @@ const [loading, setLoading] = useState(false);
 };
 
 export default Navbar;
-*/
-import React, { useState, useEffect } from 'react';
+
+
+/**
+import React, { useState, useEffect, useContext } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { FaShoppingCart, FaUserCircle, FaSpinner } from 'react-icons/fa'; // New icons
+import { FaShoppingCart, FaUserCircle, FaSpinner } from 'react-icons/fa';
 import './Navbar.css';
+import { ShopContext } from '../../context/shopContext';
 
 const Navbar = () => {
   const [loading, setLoading] = useState(false);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchInput, setSearchInput] = useState('');
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const { updateSearchTerm, searchTerm } = useContext(ShopContext);
 
   const navigate = useNavigate();
   const location = useLocation();
 
+  /*Sync search input with context searchTerm*
+  useEffect(() => {
+    setSearchInput(searchTerm);
+  }, [searchTerm]);
+
+  /* Handle loading state on route change*
   useEffect(() => {
     setLoading(true);
-    const timer = setTimeout(() => setLoading(false), 1000);
+    const timer = setTimeout(() => setLoading(false), 500);
     return () => clearTimeout(timer);
   }, [location]);
 
+  /*Handle search submission*
   const handleSearch = (e) => {
     e.preventDefault();
-    if (searchQuery.trim()) {
-      navigate(`/search?query=${searchQuery}`);
+    if (searchInput.trim()) {
+      updateSearchTerm(searchInput);
+      /**navigate(`/search?query=${searchInput}`);
     }
   };
 
+  /*Toggle and close dropdown*
   const toggleDropdown = () => setDropdownOpen(!isDropdownOpen);
+  const closeDropdown = () => setDropdownOpen(false);
+
+  /*Close dropdown when clicking outside*
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (!e.target.closest('.profile-group')) {
+        closeDropdown();
+      }
+    };
+    if (isDropdownOpen) {
+      document.addEventListener('click', handleOutsideClick);
+    }
+    return () => document.removeEventListener('click', handleOutsideClick);
+  }, [isDropdownOpen]);
 
   return (
     <div>
@@ -122,23 +192,28 @@ const Navbar = () => {
             <input
               type="text"
               placeholder="Search"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
             />
-            <button type="submit" className="search-button">Search</button>
+            <button onClick={handleSearch} type="submit" className="search-button">
+              Search
+            </button>
           </form>
           <div className="icons">
             <div className="profile-group" onClick={toggleDropdown}>
-              <FaUserCircle className="profile-icon" aria-label="User Profile" />               {isDropdownOpen && (
+              <FaUserCircle className="profile-icon" aria-label="User Profile" />
+              {isDropdownOpen && (
                 <div className="dropdown-menu">
                   <Link to="/login">
                     <p className="dropdown-item">Account</p>
                   </Link>
-                  <p className="dropdown-item">Logout</p>
+                  <p className="dropdown-item" onClick={() => console.log('Logout action')}>
+                    Logout
+                  </p>
                 </div>
               )}
             </div>
-            <div className="cart-icon" onClick={() => navigate("/Cart")}>
+            <div className="cart-icon" onClick={() => navigate('/cart')}>
               <FaShoppingCart className="icon" aria-label="Cart" />
               <span className="cart-count">0</span>
             </div>
@@ -146,21 +221,15 @@ const Navbar = () => {
         </div>
         <div className="nav-bottom">
           <div className="nav-container">
-            <div onClick={() => navigate("/category/Men")} className="navbar-link">
-              Men fashion
-            </div>
-            <div onClick={() => navigate("/category/Women")} className="navbar-link">
-              Women fashion
-            </div>
-            <div onClick={() => navigate("/category/Kids")} className="navbar-link">
-              Kids fashion
-            </div>
-            <div onClick={() => navigate("/category/Accessories")} className="navbar-link">
-              Accessories
-            </div>
-            <div onClick={() => navigate("/category/Furniture")} className="navbar-link">
-              Furniture
-            </div>  
+            {['Men', 'Women', 'Kids', 'Accessories', 'Furniture'].map((category) => (
+              <div
+                key={category}
+                onClick={() => navigate(`/category/${category}`)}
+                className="navbar-link"
+              >
+                {category} Fashion
+              </div>
+            ))}
           </div>
         </div>
       </nav>
@@ -169,3 +238,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+**/ 
