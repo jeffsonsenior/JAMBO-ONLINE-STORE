@@ -1,45 +1,3 @@
-/**import React from 'react'
-import './Login.css'
-import { useState } from 'react'
-
-
-const Login = () => {
-
-  const[currentState, setCurrentState] = useState('Login')
-  return (
-    <div>
-      <form className='auth-form'>
-        <div className="form-header">
-          <p className="form-title">{currentState} </p>
-        </div>
-        {
-          currentState === 'Login' ? null : (
-            <input type='text' className='form-input' placeholder='Username' required />
-          )
-        }
-        <input type='text' className='form-input' placeholder='Name' required />
-        <input type='email' className='form-input' placeholder='Email' required />
-        <input type='password' className='form-input' placeholder='Password' required />
-        <div className="form-footer">
-          <p className='forgot-password'>Forgot password</p>
-          {
-            currentState === 'Login' ? (
-              <p className='toggle-auth-state' onClick={()=> setCurrentState('Sign Up')}>Create account</p>
-            ) : (
-              <p className='toggle-auth-state' onClick={()=> setCurrentState('Login')}>Login Here</p>
-            )
-          }
-        </div>
-        <button className='form-bottom'>
-          {currentState ==='Login' ? 'Sign-In' : 'Sign-Up'}
-        </button>
-      </form>      
-    </div>
-  )
-}
-
-export default Login
-**/
 import React, { useState } from 'react';
 import './Login.css';
 
@@ -116,7 +74,7 @@ const Login = () => {
             {currentState === 'Login' ? 'Create account' : 'Login Here'}
           </p>
         </div>
-        <button type="submit" className="form-bottom">
+        <button type="submit" className="submit-button">
           {currentState === 'Login' ? 'Sign-In' : 'Sign-Up'}
         </button>
       </form>

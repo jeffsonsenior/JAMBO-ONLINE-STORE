@@ -54,7 +54,7 @@ export const assets = {
     jambo_logo,
 }
 
-export const Products = [
+/**export const Products = [
     {
         _id: "a",
         name: "beatiful women dress",
@@ -378,7 +378,7 @@ export const Products = [
         bestseller: false
     },
 ]
-    /**
+**/
 
 export const Products = [
     {
@@ -596,4 +596,3 @@ export const Products = [
         description: "Relaxed and chic, these palazzo pants are perfect for casual outings or lounging in style.",
     },
 ];
-**/
