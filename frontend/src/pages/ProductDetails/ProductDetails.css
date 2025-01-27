@@ -121,20 +121,20 @@
 }
 
 .add-to-cart-button {
-  padding: 12px 20px;
+  padding: 10px 20px;
   font-size: 1.2rem;
-  background-color: #0a140e;
+  background-color: #686868;
   color: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 30px;
   cursor: pointer;
   width: 40%;
   transition: background-color 0.3s ease;
-  padding: 10px 20px;
+  
 }
 
 .add-to-cart-button:hover {
-  background-color: #363636;
+  background-color: #6d4f4f;
 }
 
 /* Tabs Section */

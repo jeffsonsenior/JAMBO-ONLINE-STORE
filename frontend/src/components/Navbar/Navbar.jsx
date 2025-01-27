@@ -3,13 +3,15 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { FaShoppingCart, FaUserCircle, FaSpinner } from 'react-icons/fa';
 import './Navbar.css';
 import { ShopContext } from '../../Context/ShopContext';
+
+
 /*import Login from '../../pages/Login/Login';*/
 
 const Navbar = () => {
   const [loading, setLoading] = useState(false);
   const [searchInput, setSearchInput] = useState('');
   const [isDropdownOpen, setDropdownOpen] = useState(false);
-  const { updateSearchTerm, searchTerm } = useContext(ShopContext);
+  const { updateSearchTerm, searchTerm, getCartAmount } = useContext(ShopContext);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -63,7 +65,7 @@ const Navbar = () => {
           <div className="loader">
             <FaSpinner className="loader-icon spinning" />
           </div>
-          <p className="loader-text">ldg...</p>
+          <p className="loader-text">loading...</p>
         </div>
       )}
       <nav className="navbar">
@@ -95,7 +97,7 @@ const Navbar = () => {
             </div>
             <div className="cart-icon" onClick={() => navigate('/cart')}>
               <FaShoppingCart className="icon" aria-label="Cart" />
-              <span className="cart-count">0</span>
+              <span className="cart-count">{getCartAmount}</span>
             </div>
           </div>
         </div>

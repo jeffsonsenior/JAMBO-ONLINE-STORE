@@ -6,13 +6,15 @@ import Collection from './pages/Collection/Collection'
 import Navbar from './Components/Navbar/Navbar'
 import Login from './pages/Login/Login'
 import ProductDetails from './pages/ProductDetails/ProductDetails'
-
+import { ToastContainer } from 'react-toastify'
+//import 'react-toastify/dist/ReactToastify.css'
 
 
 
 const App = () => {
   return (
     <div>
+      <ToastContainer />
     <Navbar />  
       <Routes>
         <Route path='/login' element={<Login />} />

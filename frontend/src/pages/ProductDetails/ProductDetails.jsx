@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import './ProductDetails.css';
 
 const ProductDetails = () => {
-  const { products, currency } = useContext(ShopContext); // Get the products and currency from context
+  const { products, currency, addToCart } = useContext(ShopContext); // Get the products and currency from context
   const { productId } = useParams(); // Get the productId from the route params
 
   const [productData, setProductData] = useState(null); // State for product data
@@ -78,7 +78,7 @@ const ProductDetails = () => {
             <h4>Secure Payment</h4>
             <h4>Other Payment Options</h4>
           </div>
-          <button className="add-to-cart-button">Add to Cart</button>
+          <button onClick={()=>addToCart(productData._id, size)} className="add-to-cart-button">Add to Cart</button>
         </div>
       </div>
       <div className="description-review-select">

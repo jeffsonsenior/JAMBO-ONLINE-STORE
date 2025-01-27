@@ -1,3 +1,4 @@
+import { ToastContainer, toast } from 'react-toastify';
 /**
 #root {
   max-width: 1280px;
