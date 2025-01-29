@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 /**
-*: Targets all elements to apply a universal reset.
+Targets all elements to apply a universal reset.
 margin: 0;: Removes default margin from all elements.
 padding: 0;: Removes default padding from all elements.
 box-sizing: border-box;: Ensures padding and borders are included in an element’s width/height calculations.
@@ -39,7 +39,7 @@ body {
   margin-top: 10px;
 }
 .product-card{
-  width: 300px;
+  width: 200px;
   border: 1px solid #ffffff;
   padding: 10px;
   text-align: center;
@@ -53,7 +53,7 @@ body {
 }
 .product-card img{
   width: 100%;
-  height: 200px;
+  height: 300px;
   object-fit: cover;
   object-position: center;
   transform: scale(0.8);
@@ -83,7 +83,7 @@ body {
   margin-top: 10px;
 }
 .product-card button{
-  background: #f0c040;
+  background: #f7f6f4;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -95,7 +95,7 @@ body {
 }
 .banner img{
   width: 100%;
-  height: 300px;
+  height: 250px;
   object-fit: cover;
   object-position: center;
 }

@@ -12,15 +12,25 @@
   justify-content: space-between;
   padding: 10px 20px;
 }
+
 .nav-top.open {
   display: flex;
   flex-direction: column;
 }
 
+.store-name {
+  font-size: 20px; 
+  font-weight: bold;
+  display: inline-block;
+  margin-left: 10px;
+  color: #fa0bc6;
+}
 
-.nav-top h2 {
-  font-size: 1.5rem;
-  color: #f32195;
+.nav-top h4 {
+  font-size: 13px; 
+  font-weight: bold;
+  font-style: italic;
+  color: #edfd04;
   cursor: pointer;
 }
 
@@ -29,7 +39,20 @@
   color: inherit;
 }
 
-/* Search Bar */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+}
+
+.navtop-logo {
+  width: 40px;
+  height: auto;
+  border-radius: 100px;
+}
+
 .search-bar {
   display: flex;
   align-items: center;
@@ -81,8 +104,6 @@
   transform: scale(1);
 }
 
-
-/* Icons */
 .icons {
   display: flex;
   align-items: center;
@@ -91,11 +112,13 @@
 
 .profile-group {
   position: relative;
+  display: inline-block; 
 }
 
 .profile-icon {
   font-size: 1.8rem;
   color: #f8dc3f;
+  cursor: pointer;
 }
 
 .dropdown-menu {
@@ -109,9 +132,11 @@
   overflow: hidden;
   display: none;
   z-index: 10;
+  min-width: 150px;
 }
 
-.profile-group:hover .dropdown-menu {
+.profile-group:hover .dropdown-menu,
+.dropdown-menu:hover {
   display: block;
 }
 
@@ -120,16 +145,17 @@
   font-size: 0.9rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  white-space: nowrap;
 }
 
 .dropdown-item:hover {
   background-color: #fcb4b4;
 }
 
-/* Cart Icon */
 .cart-icon {
-  position: flex;
   cursor: pointer;
+  font-size: 24px;
+  position: relative;
 }
 
 .icon {
@@ -139,17 +165,20 @@
 
 .cart-count {
   position: absolute;
-  top: 3px;
-  right: 5px;
-  background-color: #91f891;
-  color: #0a0a0a;
-  font-size: 1rem;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
   font-weight: bold;
   border-radius: 50%;
-  padding: 2px 6px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Navbar Bottom */
 .nav-bottom {
   background-color: #31416d;
 }
@@ -175,7 +204,6 @@
   color: #fd7f0a;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .nav-top {
     flex-direction: column;
@@ -192,7 +220,6 @@
   }
 }
 
-/* Loader */
 .loader-container {
   display: flex;
   flex-direction: column;
@@ -230,7 +257,6 @@
 
 .loader-icon {
   font-size: 24px;
-  color: #1c0edb;
+  color: #fc0808;
   animation: spin 1s linear infinite;
 }
-**/

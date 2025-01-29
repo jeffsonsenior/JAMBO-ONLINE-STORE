@@ -3,6 +3,9 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { FaShoppingCart, FaUserCircle, FaSpinner } from 'react-icons/fa';
 import './Navbar.css';
 import { ShopContext } from '../../Context/ShopContext';
+import jamboLogo from '../../assets/jambo_logo.png';
+
+
 const Navbar = () => {
   const [loading, setLoading] = useState('false');
   const [searchInput, setSearchInput] = useState('');
@@ -58,7 +61,9 @@ const Navbar = () => {
       <nav className="navbar">
         <div className="nav-top">
           <Link to="/">
-            <h2>Jambo Online Store</h2>
+            <img src={jamboLogo} alt="Jambo Logo" className="navtop-logo" />
+            <h2 className="store-name">Jambo Online Store</h2>
+            <h4>Connecting You to the Best, Anytime, Anywhere </h4>
           </Link>
           <div className="search-bar">
             <input

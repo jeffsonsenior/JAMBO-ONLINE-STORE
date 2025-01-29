@@ -41,7 +41,7 @@ const Cart = () => {
                   <p className="cart-product-name">{productData.name}</p>
                   <div className="product-price-size">
                     <p>
-                      {currency} {productData.price}
+                      <p className='cart-product-price'>{currency} {productData.price} </p>
                     </p>
                     <p className="size">Size: {item.size}</p>
                   </div>
@@ -67,7 +67,7 @@ const Cart = () => {
       </div>
 
       <div className="checkout-container">
-        <div className="checkout">
+        <div className="checkout-box">
           <CartTotal />
           <div className="checkout-button-container">
             <button className="checkout-button">PROCEED TO CHECKOUT</button>
@@ -79,3 +79,4 @@ const Cart = () => {
 };
 
 export default Cart;
+

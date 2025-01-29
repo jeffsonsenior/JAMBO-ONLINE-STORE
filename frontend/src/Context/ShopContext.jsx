@@ -10,6 +10,7 @@ const ShopContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState({}); // Cart state
 
   const currency = "Ksh"; // Default currency
+  const delivery_fee = 200; // Delivery fee
 
   // Function to add items to the cart
   const addToCart = (itemId, size) => {
@@ -96,6 +97,7 @@ const ShopContextProvider = ({ children }) => {
     getCartCount,
     getCartAmount,
     updateSearchTerm,
+    delivery_fee,
   };
 
   return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;
