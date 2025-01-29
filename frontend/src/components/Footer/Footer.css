@@ -1,0 +1,120 @@
+/* General Footer Styling */
+footer {
+  background-color: #d6e9f1;
+  color: #0a0a0a;
+  padding: 0.0rem 0.8rem; /* Reduced padding for shorter height */
+  font-family: Arial, sans-serif;
+}
+
+/* Footer Top Section */
+.footer-top {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.footer-top h2 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-top p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.footer-top .input {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.footer-top input[type="email"] {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  width: 280px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-top button {
+  padding: 0.5rem 1rem;
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer-top button:hover {
+  background-color: #756f6f;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+
+.footer-left {
+  flex: 1;
+}
+
+.footer-left h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-left .socials {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: #fc0e0e;
+}
+
+.social-icon:hover {
+  color: #89fc89;
+}
+
+/* Quick Links Section */
+.footer-right {
+  text-align: flex; /* Align content to the far right */
+  min-width: 20px;
+}
+
+.footer-right h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-right ul {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-right ul li{
+  font-size: 18px;
+  list-style: none;
+  cursor: pointer;
+  
+
+
+}
+
+.footer-right li:hover {
+  text-decoration: underline;
+}
+
+/* Footer Bottom Text */
+.copy {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+  text-align: center;
+}

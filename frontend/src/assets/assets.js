@@ -1,3 +1,17 @@
+  /**
+    * Product data for the e-commerce site
+    *  Each product has a unique ID, name, description, price, image, category, sizes, date, and bestseller   status
+    * The image field contains an array of image URLs for the product
+    * The sizes field contains an array of available sizes for the product
+    * The date field represents the timestamp when the product was added
+    * The bestseller field indicates whether the product is a bestseller or not
+    * The products are sorted by category and bestseller status
+    * The products are displayed in the order they appear in the array
+    * The product images are stored in the assets folder
+    * The product images are named p_img1, p_img2, p_img3, etc.
+    * The product images are in the .jpg format
+    * The product images are displayed in the order they appear in the array
+    **/
 import p_img1 from './women-top.jpg'
 import p_img2_1 from './kid1.jpg'
 import p_img2_2 from './kid1.1.jpg'
@@ -53,8 +67,7 @@ export const assets = {
     profile_logo,
     jambo_logo,
 }
-
-/**export const Products = [
+export const Products = [
     {
         _id: "a",
         name: "beatiful women dress",
@@ -266,8 +279,8 @@ export const assets = {
     },
     {
         _id: "at",
-        name: "Woman casual wear, Palazzo Pants",
-        description: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. In veniam deleniti iure. Natus ab quisquam delectus voluptatem ipsum laboriosam laudantium quia vero rem earum, accusamus officia cumque vel architecto iste.",
+        name: " Woman casual wear, Palazzo Pants",
+        description: "Embrace effortless elegance with these stylish palazzo pants, designed for ultimate comfort and a flattering fit. Perfect for casual outings or relaxed weekends, these pants feature a flowy design that pairs easily with any top for a chic, laid-back look.",
         price: 1190,
         image: [p_img20],
         category: "Women",
@@ -278,7 +291,7 @@ export const assets = {
     {
         _id: "au",
         name: "Women trouser",
-        description: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. In veniam deleniti iure. Natus ab quisquam delectus voluptatem ipsum laboriosam laudantium quia vero rem earum, accusamus officia cumque vel architecto iste.",
+        description: " Stay comfortable and fashionable with these versatile women's trousers. Crafted for all-day wear, they offer a sleek, flattering silhouette and are perfect for both work and casual settings. Available in a variety of sizes to ensure the perfect fit.",
         price: 1270,
         image: [p_img21],
         category: "Women",
@@ -290,7 +303,7 @@ export const assets = {
     {
         _id: "av",
         name: "Women fitting dress",
-        description: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. In veniam deleniti iure. Natus ab quisquam delectus voluptatem ipsum laboriosam laudantium quia vero rem earum, accusamus officia cumque vel architecto iste.",
+        description: "  This women's fitted dress is designed to enhance your natural shape with a tailored, form-fitting cut. Ideal for a night out or special occasions, it combines elegance with modern style, making it a must-have addition to your wardrobe.",
         price: 2030,
         image: [p_img22],
         category: "Women",
@@ -301,7 +314,7 @@ export const assets = {
     {
         _id: "aw",
         name: "Boy Casaul Slim Fit Polo Shirt",
-        description: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. In veniam deleniti iure. Natus ab quisquam delectus voluptatem ipsum laboriosam laudantium quia vero rem earum, accusamus officia cumque vel architecto iste.",
+        description: "  Keep your little one stylish with this slim fit polo shirt. Designed for comfort and style, it features a classic polo collar and a modern slim cut that is perfect for casual wear or more polished looks.",
         price: 1840,
         image: [p_img23],
         category: "Kids",
@@ -312,7 +325,7 @@ export const assets = {
     {
         _id: "ax",
         name: "Boy Casaul worm sweater and mavin",
-        description: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. In veniam deleniti iure. Natus ab quisquam delectus voluptatem ipsum laboriosam laudantium quia vero rem earum, accusamus officia cumque vel architecto iste.",
+        description: "  This cozy warm sweater and mavin set is perfect for colder weather. Designed for comfort and warmth, it combines style with practicality, making it an ideal choice for your child is winter wardrobe.",
         price: 1010,
         image: [p_img24],
         category: "Kids",
@@ -323,7 +336,7 @@ export const assets = {
     {
         _id: "ay",
         name: "Kids Fashion Slim Fit Casual",
-        description: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. In veniam deleniti iure. Natus ab quisquam delectus voluptatem ipsum laboriosam laudantium quia vero rem earum, accusamus officia cumque vel architecto iste.",
+        description: "  Elevate your child is wardrobe with this slim-fit casual outfit, perfect for everyday wear. Designed with a modern cut, it ensures both comfort and style, making it easy for your little one to stay fashionable while on the go.",
         price: 1290,
         image: [p_img25],
         category: "Kids",
@@ -334,7 +347,7 @@ export const assets = {
     {
         _id: "az",
         name: "Woman casual shirt",
-        description: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. In veniam deleniti iure. Natus ab quisquam delectus voluptatem ipsum laboriosam laudantium quia vero rem earum, accusamus officia cumque vel architecto iste.",
+        description: "  This casual shirt for women combines comfort with style, making it perfect for everyday wear. With its simple design and breathable fabric, it offers a relaxed fit that pairs effortlessly with jeans, skirts, or shorts.",
         price: 1320,
         image: [p_img26],
         category: "Women",
@@ -346,7 +359,7 @@ export const assets = {
     {
         _id: "ba",
         name: "Kids Fashion",
-        description: "  Lorem ipsum dolor sit amet consectetur adipisicing elit. In veniam deleniti iure. Natus ab quisquam delectus voluptatem ipsum laboriosam laudantium quia vero rem earum, accusamus officia cumque vel architecto iste.",
+        description: "  A fun and fashionable outfit for kids, designed to keep them looking trendy and feeling comfortable. Perfect for any occasion, this piece is made with soft materials that provide all-day comfort without compromising on style.",
         price: 4200,
         image: [p_img27],
         category: "Kids",
@@ -357,7 +370,7 @@ export const assets = {
     {
         _id: "bb",
         name: "Men Slim Fit khaki pants",
-        description: "  Elevate your style with our Men's Slim Fit Relaxed Denim Jacket, crafted from durable, high-quality denim for a sleek yet comfortable fit. Designed with classic details like a button-front closure, chest flap pockets, and adjustable cuffs, perfect for layering over t-shirts or hoodies to create versatile casual or smart-casual looks. With reinforced stitching and easy-care maintenance, this jacket is built to last, making it a timeless wardrobe essential for effortless, everyday cool.",
+        description: "  These men's slim-fit khaki pants offer a sleek, modern look with a comfortable fit. Perfect for both casual and semi-formal occasions, they feature durable fabric and a versatile design that pairs well with any shirt or jackets, everyday cool.",
         price: 2230,
         image: [p_img28],
         category: "Men",
@@ -378,9 +391,9 @@ export const assets = {
         bestseller: false
     },
 ]
-**/
 
-export const Products = [
+/**
+export const Products = [  
     {
         _id: "a",
         name: "Beautiful Women's Dress",
@@ -427,7 +440,7 @@ export const Products = [
     },
     {
         _id: "ae",
-        name: "Women’s Basic Casual Fitting Black Dress",
+        name: "Womens Basic Casual Fitting Black Dress",
         description: "A classic black dress with a flattering fit. Perfect for casual outings or dressing up for a night out.",
         price: 1300,
         image: [p_img5],
@@ -593,6 +606,116 @@ export const Products = [
     {
         _id: "at",
         name: "Women's Casual Wear - Palazzo Pants",
-        description: "Relaxed and chic, these palazzo pants are perfect for casual outings or lounging in style.",
+        description: "Relaxed and chic, these palazzo pants are perfect for casual outings or lounging.",
+        price: 1570,
+        image: [p_img21],
+        category: "Women",
+        subCategory: "Winterwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716634345448,
+        bestseller: false
+    {
+        _id: "au",
+        name: "Women trouser",
+        description: "Stay comfortable and fashionable with these versatile women's trousers. Crafted for all-day wear, they offer a sleek, flattering silhouette and are perfect for both work and casual settings. Available in a variety of sizes to ensure the perfect fit.",
+        price: 1270,
+        image: [p_img21],
+        category: "Women",
+        subCategory: "Winterwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716634345448,
+        bestseller: false
     },
-];
+    {
+        _id: "av",
+        name: "Women Fitting Dress",
+        description: "This women's fitted dress is designed to enhance your natural shape with a tailored, form-fitting cut. Ideal for a night out or special occasions, it combines elegance with modern style, making it a must-have addition to your wardrobe.",
+        price: 2030,
+        image: [p_img22],
+        category: "Women",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716635445448,
+        bestseller: false
+    },
+    {
+        _id: "aw",
+        name: "Boy Casual Slim Fit Polo Shirt",
+        description: "Keep your little one stylish with this slim fit polo shirt. Designed for comfort and style, it features a classic polo collar and a modern slim cut that is perfect for casual wear or more polished looks.",
+        price: 1840,
+        image: [p_img23],
+        category: "Kids",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716636545448,
+        bestseller: false
+    },
+    {
+        _id: "ax",
+        name: "Boy Casual Warm Sweater and Mavin",
+        description: "This cozy warm sweater and mavin set is perfect for colder weather. Designed for comfort and warmth, it combines style with practicality, making it an ideal choice for your child's winter wardrobe.",
+        price: 1010,
+        image: [p_img24],
+        category: "Kids",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716637645448,
+        bestseller: false
+    },
+    {
+        _id: "ay",
+        name: "Kids Fashion Slim Fit Casual",
+        description: "Elevate your child's wardrobe with this slim-fit casual outfit, perfect for everyday wear. Designed with a modern cut, it ensures both comfort and style, making it easy for your little one to stay fashionable while on the go.",
+        price: 1290,
+        image: [p_img25],
+        category: "Kids",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716638745448,
+        bestseller: false
+    },
+    {
+        _id: "az",
+        name: "Women Casual Shirt",
+        description: "This casual shirt for women combines comfort with style, making it perfect for everyday wear. With its simple design and breathable fabric, it offers a relaxed fit that pairs effortlessly with jeans, skirts, or shorts.",
+        price: 1320,
+        image: [p_img26],
+        category: "Women",
+        subCategory: "Winterwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716639845448,
+        bestseller: false
+    },
+    {
+        _id: "ba",
+        name: "Kids Fashion",
+        description: "A fun and fashionable outfit for kids, designed to keep them looking trendy and feeling comfortable. Perfect for any occasion, this piece is made with soft materials that provide all-day comfort without compromising on style.",
+        price: 4200,
+        image: [p_img27],
+        category: "Kids",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716640945448,
+        bestseller: false
+    },
+    {
+        _id: "bb",
+        name: "Men Slim Fit Khaki Pants",
+        description: "These men's slim-fit khaki pants offer a sleek, modern look with a comfortable fit. Perfect for both casual and semi-formal occasions, they feature durable fabric and a versatile design that pairs well with any shirt or jacket for an everyday cool look.",
+        price: 2230,
+        image: [p_img28],
+        category: "Men",
+        subCategory: "Winterwear",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716642045448,
+        bestseller: false
+    },
+    {
+        _id: "bc",
+        name: "Women Basic Casual Fitting Top",
+        description: "Elevate your everyday wardrobe with our Women's Basic Casual Fitted Top, crafted from a soft, breathable cotton-spandex blend for a flattering fit that moves with you. Featuring a timeless design with a round neckline and versatile fit, perfect for casual outings, workdays, or nights out. Durable and easy to care for, this top retains its shape and color after multiple washes and comes in a variety of vibrant and neutral tones. Pair it effortlessly with jeans, skirts, or shorts for a chic, everyday look.",
+        price: 2410,
+        image: [p_img29],
+        category: "Women",
+        sizes: ["S", "M", "L", "XL"],
+        date: 1716643145448,
+        bestseller: false
+    }
+]
+
+**/
