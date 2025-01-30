@@ -1,12 +1,42 @@
 {
-  "name": "backend",
+  "name": "jambo-online-store",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "��J\u0000A\u0000M\u0000B\u0000O\u0000-\u0000O\u0000N\u0000L\u0000I\u0000N\u0000E\u0000-\u0000S\u0000T\u0000O\u0000R\u0000E\u0000\r\u0000 \u0000",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "npm run server",
+    "dev": "nodemon server.js",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeffsonsenior/JAMBO-ONLINE-STORE.git"
   },
   "keywords": [],
   "author": "",
+  "type": "module",
   "license": "ISC",
-  "description": ""
+  "bugs": {
+    "url": "https://github.com/jeffsonsenior/JAMBO-ONLINE-STORE/issues"
+  },
+  "homepage": "https://github.com/jeffsonsenior/JAMBO-ONLINE-STORE#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^2.5.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "ioredis": "^5.4.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.9.5",
+    "multer": "^1.4.5-lts.1",
+    "razorpay": "^2.9.5",
+    "stripe": "^17.6.0",
+    "validator": "^13.12.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
 }
