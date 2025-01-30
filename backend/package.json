@@ -4,8 +4,7 @@
   "description": "��J\u0000A\u0000M\u0000B\u0000O\u0000-\u0000O\u0000N\u0000L\u0000I\u0000N\u0000E\u0000-\u0000S\u0000T\u0000O\u0000R\u0000E\u0000\r\u0000 \u0000",
   "main": "server.js",
   "scripts": {
-    "server": "npm run server",
-    "dev": "nodemon server.js",
+    "server": "nodemon server.js",
     "start": "node server.js"
   },
   "repository": {
