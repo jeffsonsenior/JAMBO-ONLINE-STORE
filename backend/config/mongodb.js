@@ -8,7 +8,7 @@ const connectDB = async () => {
 
   });
 
-  await mongoose.connect(`${process.env.MONGODB_URI}/jambo online store`) 
+  await mongoose.connect(`${process.env.MONGODB_URI}/jambo_online_store`) 
 
 }
 
